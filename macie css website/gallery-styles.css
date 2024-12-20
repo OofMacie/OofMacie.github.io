@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #ff6f91;
+    padding: 10px 20px;
+    border-radius: 15px;
+    margin-bottom: 0; 
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Pacifico', cursive; 
+}
+
+.topnav a:hover {
+    background-color: #ff99ac;
+    color: white;
+}
+
+.topnav a.split {
+    float: right;
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    background: #f2e9ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+    padding: 20px; 
+}
+
+.gallery {
+    margin-top: 10px;
+    display: flex;
+    align-items: flex-end; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+}
+
+.img-box {
+    width: 350px; 
+    margin: 15px; 
+    border-radius: 20px; 
+    position: relative;
+    overflow: hidden; 
+    transition: transform 0.5s; 
+}
+
+.img-box img {
+    width: 100%; 
+    height: auto; 
+    display: block; 
+}
+
+.img-box h3 {
+    color: #fff; 
+    position: absolute;
+    bottom: 10px;
+    left: 30px;
+    background: rgba(0, 0, 0, 0.5); 
+    padding: 10px; 
+    border-radius: 10px; 
+    opacity: 0; 
+    transition: opacity 0.5s; 
+}
+
+.img-box:hover {
+    transform: scale(1.05); 
+    cursor: pointer;
+}
+
+.img-box:hover h3 {
+    opacity: 1; 
+}
+
+.gallery-head {
+    font-size: 32px;
+    color: #ff6f91;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Pacifico', cursive;
+}
+
+/* Citations Styles */
+.citations, .tutorials {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #ff6f91; 
+    border-radius: 10px;
+    max-width: 600px;
+    text-align: center;
+    position: relative; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.citations::before,
+.citations::after,
+.tutorials::before,
+.tutorials::after {
+    content: '';
+    position: absolute;
+    border: 2px dashed #ff99ac; 
+    border-radius: 10px;
+}
+
+.citations::before {
+    top: -10px; 
+    left: 0;
+    right: 0;
+}
+
+.citations::after {
+    bottom: -10px; 
+    left: 0;
+    right: 0;
+}
+
+.tutorials::before {
+    top: -10px; 
+    left: 0;
+    right: 0;
+}
+
+.tutorials::after {
+    bottom: -10px; 
+    left: 0;
+    right: 0;
+}
+
+.citations h3, .tutorials h3 {
+    font-size: 24px;
+    color: #ff6f91;
+    margin-bottom: 10px;
+    font-family: 'Pacifico', cursive;
+}
+
+.citations ul, .tutorials ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.citations ul li, .tutorials ul li {
+    margin: 5px 0;
+}
+
+.citations ul li a, .tutorials ul li a {
+    text-decoration: none;
+    color: #ff6f91;
+    transition: color 0.3s;
+}
+
+.citations ul li a:hover, .tutorials ul li a:hover {
+    color: #ff99ac;
+}
+::-webkit-scrollbar{
+    width: 10px;
+
+}
+::-webkit-scrollbar-track{
+    background: #70813a;
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(#b5639a, #a09dd2);
+    border-radius: 10px;
+
+}

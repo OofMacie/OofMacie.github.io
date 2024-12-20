@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <div id="header">
+        <div class="container">
+            <!-- Navigation Bar -->
+            <nav>
+                <img src="images/logo.png" class="logo" alt="Logo">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Header Content -->
+            <div class="header-text">
+                <p>Computer Science Student</p>
+                <h1>Hi, my name is<span> Macie Lanthier</span><br></h1>
+                 <p>Welcome to my Portfolio! Here you can see some projects I've worked and learn more about me.</p>
+            </div>
+        </div>
+    </div>
+    <!-- About Section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/Macie_Lanthier_Resume.pdf.png" alt="Macie's Portfolio">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        Hello! My name is <strong>Macie</strong>, I grew up in the Adirondacks in a town called Tupper Lake. I am attending FLCC for computer science. 
+                        
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Hobbies')">Hobbies</p>
+                        <p class="tab-links" onclick="opentab('About Me')">About Me</p>
+                        <p class="tab-links" onclick="opentab('Goals')">Goals</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="Hobbies">
+                        <ul>
+                            <li><span>Hobby 1</span><br>Gaming</li>
+                            <li><span>Hobby 2</span><br>Reading</li>
+                            <li><span>Hobby 3</span><br>Drawing/Crafts</li>
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="About Me">
+                        <ul>
+                            <li><span>Tech</span><br>I love technology and knowing how it works.</li>
+                            <li><span>Favorite Game</span><br>My all time favorite game is Skyrim.</li>
+                            <li><span>Animals</span><br>I have a love for animals of every kind my favorite animal is cats.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Goals">
+                        <ul>
+                            <li><span>Game Developer</span><br>I aspire to be a game developer.</li>
+                            <li><span>College Goals</span><br>My college goals are to get my Associates and Bachelors degree's in Computer Science.</li>
+                            <li><span>Making my own Game</span><br>My ultimate goal for my future is to make my own game someday.</li>
+                        </ul>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+             <a href="https://unsplash.com/photos/purple-and-pink-abstract-painting-P194ErzT_co"target="_blank">Background Image</a><br>
+            </p>
+        </div>
+    </footer>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+       
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+
+        }
+
+    </script>
+</body>
+</html>
